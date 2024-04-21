@@ -13,10 +13,10 @@ const App = () => {
   return (
 
     <div>
-    <div style={{ backgroundImage: "url('/assets/images/IMG_5650.png')",  zIndex:100}}>
+    <div style={{ backgroundImage: "url('../assets/images/IMG_5650.png')",  width: '100vw' }}>
       <header className="flex justify-between items-center p-6 bg-sky-500 text-white">
         
-        <img src="../assets/images/logo.jpeg" style={{ width: '150px', height: '150px' }} alt="logo"/>
+        <img src="../assets/images/logo.png" style={{ width: '150px', height: '150px', zIndex:10 }} alt="logo"/>
       </header>
     <div className=" ">
       <div className="relative z-10 pb-8 bg-background sm:pb-16 md:pb-20 lg:w-full lg:pb-28 xl:pb-32">
@@ -27,17 +27,27 @@ const App = () => {
     </div>
 
       <Chatbot />
-
-      <div className="quote-section">
+      <div className="flex flex-col items-center justify-center bg-background">
+      <div className="mt-20 py-12 px-16 sm:px-7 lg:px-10">
+        <h1 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-3xl md:text-3xl">
+          <span className="block">Together for Tomorrow: Connecting Seniors with Local Hands Ready to Help!</span>
+          
+        </h1>
+        </div>
+        </div>
+      {/* <div className="quote-section">
         <p className="quote-text">Together for Tomorrow: Connecting Seniors with Local Hands Ready to Help!</p>
-      </div>
+      </div> */}
 
       <Serve />
 
       <LazyLoad>
         <>
-          <Canvas />
+          
+          
           <About />
+          <Canvas />
+          
         </>
       </LazyLoad>
     </div>

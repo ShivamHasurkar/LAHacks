@@ -5,7 +5,9 @@ const Section= () => {
   const { section } = config;
 
   return (
+   
     <div className="flex flex-col items-center justify-center bg-background min-h-screen">
+       <div className="py-14 mx-auto px-6 sm:px-6 lg:px-10 border-3 border-gray-400 shadow-lg">
       <div className="py-10 mx-auto  px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
           <span className="block">{section.title}</span>
@@ -30,6 +32,7 @@ const Section= () => {
   </a>
 </div>
       </div>
+  </div>
       {/* Assuming SectionImage is another component that returns an <img> */}
       <SectionImage />
     </div>
