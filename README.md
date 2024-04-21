@@ -1,3 +1,5 @@
+# AidEra: Your Neighborly Helping Hand
+
 ## Inspiration
 In today's fast-paced world, the elderly often find themselves isolated, struggling to perform everyday tasks that many of us take for granted. At the same time, many younger individuals are eager to contribute to their communities but don't know where their help is most needed. Recognizing this gap, we were inspired to create AidEra—a platform designed to connect these two groups. AidEra empowers older adults to seek assistance with daily tasks, while providing a meaningful way for younger volunteers to engage and make a tangible difference. This project not only addresses the practical needs of the elderly but also fosters intergenerational relationships and community solidarity.
 
