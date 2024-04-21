@@ -2,10 +2,13 @@ import React, { ChangeEvent, useState } from 'react';
 import { model } from '../gemini/gemini';
 import { ChatSession, Content } from '@google/generative-ai';
 import { responseToJson } from '../gemini/response-utils';
+import posts from '../pages/posts.json';
+
 
 type Action = {
   actionText: string;
   actionDescription: string;
+  actionTag : string;
 };
 
 type ActionMessage = {
@@ -13,11 +16,27 @@ type ActionMessage = {
   actions: Action[];
 };
 
+type User = {
+  name: string;
+  avatar: string;
+};
+
+
+type Post = {
+  id: number;
+  user: User;
+  timestamp: string;
+  message: string;
+  serviceType: string;
+  availability: string;
+};
+
 function App() {
   const [prompt, setPrompt] = useState('');
   const [messages, setMessages] = useState<ActionMessage[]>([]);
   const [chat, setChat] = useState<ChatSession | undefined>(undefined);
   const [isOpen, setIsOpen] = useState(false);
+  const [post, setPost] = useState<Post[]>(posts);
 
   const toggleChatbot = async () => {
     setIsOpen(!isOpen);
@@ -62,6 +81,34 @@ const botMessageStyle = "bg-gray-300 p-3 rounded-lg max-w-xs mr-auto";
     setPrompt('');
   };
 
+  const [showPopup, setShowPopup] = useState(false);
+
+  
+  const performAction = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    const actionId = e.currentTarget.id
+    if (actionId === "post") {
+      // Perform the posting action
+      console.log('Hey')
+      const newPost: Post = {
+        id: posts.length + 1,
+        user: {
+          name: "My Granny",
+          avatar: "default_avatar_url",
+        },
+        timestamp: new Date().toLocaleString(),
+        message: "I'm looking for a ",
+        serviceType: "",
+        availability: "",
+      };
+      setPost((currentPosts) => [...currentPosts, newPost]);
+      setShowPopup(true);
+
+        // Maybe hide the popup after some time automatically
+        setTimeout(() => setShowPopup(false), 7000);
+      
+    } 
+  };
+
   return (
     <div className='chatbot-container'>
       <button onClick={toggleChatbot} className="chatbot-button">
@@ -82,7 +129,7 @@ const botMessageStyle = "bg-gray-300 p-3 rounded-lg max-w-xs mr-auto";
           <div key={index} className={message.content.role === 'user' ? userMessageStyle : botMessageStyle}>
             {message?.content?.parts[0]?.text}
             {message.actions.map((action, actionIndex) => (
-              <button key={actionIndex} className="mt-2 bg-blue-600 text-white py-1 px-3 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300 ease-in-out">
+              <button id={action.actionTag} key={actionIndex} onClick={(e) => performAction(e)}  className="mt-2 bg-blue-600 text-white py-1 px-3 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300 ease-in-out">
                 {action.actionText}
               </button>
             ))}
@@ -103,6 +150,16 @@ const botMessageStyle = "bg-gray-300 p-3 rounded-lg max-w-xs mr-auto";
     </div>
   </div>
 )}
+{showPopup && (
+            <div className="fixed inset-0 bg-black bg-opacity-70 z-50 flex justify-center items-center">
+                <div className="bg-white p-8 rounded-lg shadow-lg">
+                    <div className="flex justify-between items-center">
+                        <h4 className="text-lg">Added your request to the community feed!    </h4>
+                        <button onClick={() => setShowPopup(false)} className="text-lg font-semibold">  &times;</button>
+                    </div>
+                </div>
+            </div>
+        )}
 
     </div>
   );

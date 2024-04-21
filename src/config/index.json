@@ -1,69 +1,69 @@
 {
-	"section": {
-		"title": "Find trusted senior care ",
-		"subtitle": "near you!",
-		"description": "Our platform connects elderly individuals with local volunteers, providing a network of support right in their community. It leverages AI to match seniors with helpers based on needs and interests, ensuring personalized care and assistance.",
-		"img": "/assets/images/im1.jpeg",
-		"action1": {
-			"text": "Find help",
-			"href": "/Feed"
-		},
-		"action2": {
-			"text": "Priortize Emails",
-			"href": "/PrioritizeEmails"
-		}
-	},
+  "section": {
+    "title": "Find trusted senior care ",
+    "subtitle": "near you!",
+    "description": "Our platform connects elderly individuals with local volunteers, providing a network of support right in their community. It leverages AI to match seniors with helpers based on needs and interests, ensuring personalized care and assistance.",
+    "img": "/assets/images/im1.jpeg",
+    "action1": {
+      "text": "Find help",
+      "href": "/Feed"
+    },
+    "action2": {
+      "text": "Priortize Emails",
+      "href": "/PrioritizeEmails"
+    }
+  },
 
-	"about": {
-		"sections": [
-			{
-				"name": "About",
-				"href": "#",
-				"content": ""
-			},
-			{
-				"name": "Shop",
-				"href": "#",
-				"content": ""
-			},
-			{
-				"name": "Fitness",
-				"href": "#",
-				"content": ""
-			}
-		],
-		"socialMedia": {
-			"github": "https://github.com/mounika2000",
-			"twitter": "https://twitter.com/mounika_2000",
-			"linkedin": "https://www.linkedin.com/in/peteti-sai-mounika/"
-		}
-	},
-	"services": {
-		"title": "What you can find",
-		"items": [
-			{
-				"name": "Homecare",
-				"icon": "/assets/images/im2.webp",
-				"filter": "House Maintenance"
-			},
-			{
-				"name": "Transportation",
-				"icon": "/assets/images/im3.webp",
-				"filter": "Transportation"
-			},
-			{
-				"name": "Local caregiver",
-				"icon": "/assets/images/im4.webp",
-				"filter": "Personal Assistance"
-			},
-			{
-				"name": "Companionship",
-				"icon": "/assets/images/im.webp",
-				"filter": "Companionship/Social Visits"
-			}
-		]
-	},
-	"api": {
-		"priorityEmailEndpoint": "http://127.0.0.1:8000/prioritize"
-	}
+  "about": {
+    "sections": [
+      {
+        "name": "About",
+        "href": "#",
+        "content": ""
+      },
+      {
+        "name": "Shop",
+        "href": "#",
+        "content": ""
+      },
+      {
+        "name": "Fitness",
+        "href": "#",
+        "content": ""
+      }
+    ],
+    "socialMedia": {
+      "github": "https://github.com/mounika2000",
+      "twitter": "https://twitter.com/mounika_2000",
+      "linkedin": "https://www.linkedin.com/in/peteti-sai-mounika/"
+    }
+  },
+  "services": {
+    "title": "What you can find",
+    "items": [
+      {
+        "name": "Homecare",
+        "icon": "/assets/images/im2.webp",
+        "filter": "House Maintenance"
+      },
+      {
+        "name": "Transportation",
+        "icon": "/assets/images/im3.webp",
+        "filter": "Transportation"
+      },
+      {
+        "name": "Local caregiver",
+        "icon": "/assets/images/im4.webp",
+        "filter": "Personal Assistance"
+      },
+      {
+        "name": "Companionship",
+        "icon": "/assets/images/im.webp",
+        "filter": "Companionship/Social Visits"
+      }
+    ]
+  },
+  "api": {
+    "priorityEmailEndpoint": "http://192.168.91.151:8000/prioritize"
+  }
 }

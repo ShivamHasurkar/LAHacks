@@ -4,6 +4,7 @@ import { PlusIcon, UserIcon } from '@heroicons/react/solid'; // Ensure you have 
 import postsData from './posts.json'; // Make sure this path is correct
 import Divider from '../components/Divider';
 import { useRouter } from 'next/dist/client/router';
+//import fs from 'fs';
 
 
 type User = {
@@ -18,6 +19,7 @@ type Post = {
   message: string;
   serviceType: string;
   availability: string;
+  role: string;
 };
 
 const serviceTypes = [
@@ -42,6 +44,11 @@ const availabilities = [
   'Full-Time',
   'Part-Time'
 ];
+
+const role =[
+  'Volenteer',
+  'Elder'
+]
 //const location = useLocation();
    
 
@@ -108,6 +115,9 @@ const availabilities = [
     setNewAvailability(e.target.value);
   };
 
+  
+
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const currentUser: User = {
@@ -124,13 +134,33 @@ const availabilities = [
       timestamp: new Date().toLocaleString(), // Generates current date and time as a string
       message: newMessage,
       serviceType: activeServiceType,
-      availability: activeAvailability
+      availability: activeAvailability,
+      role:"Volunteer"
     };
-    setPosts([...posts, newPost]);
+    setPosts((posts) => [...posts, newPost]);
     setNewMessage(''); // Clear the input after submission
-    //setNewTag('a'); // Reset the tag to default value
-    //setNewTag2('d');
+    // let file = JSON.stringify(posts);
+
+    // fs.writeFile('./posts.json', file, (err) => {
+    // if (err) {
+    //     console.log('Error writing file:', err);
+    // } else {
+    //     console.log('Successfully wrote file');
+    // }
+//});
   };
+
+  const [showPopup, setShowPopup] = useState(false);
+
+  
+  const performAction = () => {
+    
+    setTimeout(() => setShowPopup(true), 4000);
+        // Maybe hide the popup after some time automatically
+        setTimeout(() => setShowPopup(false), 7000);
+      
+    } 
+
 
 
 
@@ -194,7 +224,7 @@ const availabilities = [
         {/* Feed */}
         <div className="space-y-4">
   {filteredPosts.map((post) => (
-    <div key={post.id} className="bg-white p-6 rounded-lg shadow-sm">
+    <div key={post.id} onClick={ performAction} className="bg-white p-6 rounded-lg shadow-sm">
       <div className="flex justify-between items-start mb-2">
         <div className="flex space-x-3">
           <UserIcon className="h-10 w-10 text-gray-400" />
@@ -209,12 +239,27 @@ const availabilities = [
         <span className="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-xs font-medium mr-2">
           {post.serviceType}
         </span>
+        
         <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
           {post.availability}
+          
+        </span>
+        <span className="bg-green-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
+          {post.role}
         </span>
       </div>
     </div>
   ))}
+  {showPopup && (
+            <div className="fixed inset-0 bg-black bg-opacity-70 z-50 flex justify-center items-center">
+                <div className="bg-white p-8 rounded-lg shadow-lg">
+                    <div className="flex justify-between items-center">
+                        <h4 className="text-lg">The volenteer has been notified via calendar!    </h4>
+                        <button onClick={() => setShowPopup(false)} className="text-lg font-semibold">  &times;</button>
+                    </div>
+                </div>
+            </div>
+        )}
 </div>
         
         {/* Message Input Form */}

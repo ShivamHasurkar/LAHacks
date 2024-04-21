@@ -1,0 +1,47 @@
+[
+  {
+    "sender": "jane.doe@example.com",
+    "subject": "Team Meeting",
+    "description": "Reminder about the upcoming team meeting to discuss project milestones.",
+    "data": {
+      "start": "02-06-2024 10:00",
+      "end": "02-06-2024 11:00"
+    }
+  },
+  {
+    "sender": "mark.twain@example.net",
+    "subject": "New Publication Draft",
+    "description": "Sending over the draft for the new publication for your review.",
+    "data": {
+      "start": "",
+      "end": ""
+    }
+  },
+  {
+    "sender": "alex.mercer@techbiz.org",
+    "subject": "Product Launch Debrief",
+    "description": "Schedule a debrief post product launch to evaluate performance metrics.",
+    "data": {
+      "start": "05-06-2024 09:30",
+      "end": "05-06-2024 10:30"
+    }
+  },
+  {
+    "sender": "sarah.connor@cyberdyne.com",
+    "subject": "Cybersecurity Update",
+    "description": "Latest update on the new cybersecurity protocols to be discussed.",
+    "data": {
+      "start": "07-06-2024 15:00",
+      "end": "07-06-2024 16:00"
+    }
+  },
+  {
+    "sender": "elliot.alderson@allsafe.io",
+    "subject": "Client Network Audit",
+    "description": "Client has requested an audit of their network, need to schedule an initial assessment.",
+    "data": {
+      "start": "10-06-2024 14:00",
+      "end": "10-06-2024 16:00"
+    }
+  }
+]

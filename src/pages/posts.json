@@ -8,7 +8,8 @@
     "timestamp": "9:20 pm",
     "message": "If anyone needs assistance with grocery shopping or errand running, I'm available on weekends. Happy to help!",
     "serviceType": "Errand Running",
-    "availability": "Weekends"
+    "availability": "Weekends",
+    "role": "Volunteer"
   },
   {
     "id": 3,
@@ -17,9 +18,10 @@
       "avatar": "path_to_avatar_image"
     },
     "timestamp": "9:20 pm",
-    "message": "I'm a nurse offering medical assistance or health check-ups for seniors, especially on weekday mornings.",
+    "message": "I need medical assistance or massage for seniors, especially on weekday mornings.",
     "serviceType": "Medical Assistance",
-    "availability": "Weekdays"
+    "availability": "Weekdays",
+    "role": "Elder"
   },
   {
     "id": 4,
@@ -30,7 +32,8 @@
     "timestamp": "9:20 pm",
     "message": "Love to cook? Me too! I can provide food delivery services with a focus on healthy, homemade meals. Reach out!",
     "serviceType": "Food Delivery",
-    "availability": "Weekdays"
+    "availability": "Weekdays",
+    "role": "Volunteer"
   },
   {
     "id": 5,
@@ -39,9 +42,10 @@
       "avatar": "path_to_avatar_image"
     },
     "timestamp": "9:20 pm",
-    "message": "Offering house maintenance services on Fridays. Whether it's fixing a leak or changing a lightbulb, I'm here to help.",
+    "message": "I need house maintenance services on Fridays, if anyone is available",
     "serviceType": "House Maintenance",
-    "availability": "Fridays"
+    "availability": "Fridays",
+    "role": "Elder"
   },
   {
     "id": 6,
@@ -52,7 +56,9 @@
     "timestamp": "9:20 pm",
     "message": "I'm available for home cleaning services during weekday evenings. A clean space is a happy space!",
     "serviceType": "Cleaning Services",
-    "availability": "Weekdays"
+    "availability": "Weekdays",
+
+    "role": "Volunteer"
   },
   {
     "id": 7,
@@ -63,7 +69,9 @@
     "timestamp": "9:20 pm",
     "message": "Available for companionship and social visits. I love board games and good conversation!",
     "serviceType": "Companionship/Social Visits",
-    "availability": "Weekends"
+    "availability": "Weekends",
+
+    "role": "Volunteer"
   },
   {
     "id": 8,
@@ -74,7 +82,9 @@
     "timestamp": "9:20 pm",
     "message": "Certified personal trainer here to help with exercise and wellness activities. Let's stay active and healthy together!",
     "serviceType": "Exercise & Wellness Activities",
-    "availability": "Weekends"
+    "availability": "Weekends",
+
+    "role": "Volunteer"
   },
   {
     "id": 9,
@@ -85,7 +95,9 @@
     "timestamp": "9:20 pm",
     "message": "I can help with transportation to appointments, shopping, or social events. I have a spacious car with accessibility features.",
     "serviceType": "Transportation",
-    "availability": "Weekdays"
+    "availability": "Weekdays",
+
+    "role": "Volunteer"
   },
   {
     "id": 10,
@@ -96,7 +108,9 @@
     "timestamp": "9:20 pm",
     "message": "Happy to provide personal assistance with daily activities or admin tasks. I'm patient and detail-oriented.",
     "serviceType": "Personal Assistance",
-    "availability": "Weekdays"
+    "availability": "Weekdays",
+
+    "role": "Volunteer"
   },
   {
     "id": 11,
@@ -107,7 +121,9 @@
     "timestamp": "9:20 pm",
     "message": "Need tech support? I can help with computers, smartphones, and more. Just a call away!",
     "serviceType": "Tech Support",
-    "availability": "Afternoons"
+    "availability": "Afternoons",
+
+    "role": "Volunteer"
   },
   {
     "id": 12,
@@ -118,7 +134,9 @@
     "timestamp": "9:20 pm",
     "message": "I'm an electrician happy to volunteer for any electrical repairs or installations needed in your home.",
     "serviceType": "House Maintenance",
-    "availability": "Evenings"
+    "availability": "Evenings",
+
+    "role": "Volunteer"
   },
   {
     "id": 13,
@@ -129,7 +147,9 @@
     "timestamp": "9:20 pm",
     "message": "If you're looking for someone to spend time and perhaps read together, I'm available most afternoons.",
     "serviceType": "Companionship/Social Visits",
-    "availability": "Afternoons"
+    "availability": "Afternoons",
+
+    "role": "Volunteer"
   },
   {
     "id": 14,
@@ -140,7 +160,9 @@
     "timestamp": "9:20 pm",
     "message": "Available for any heavy lifting or yard work that you might need help with. Just drop me a message!",
     "serviceType": "House Maintenance",
-    "availability": "Full-Time"
+    "availability": "Full-Time",
+
+    "role": "Volunteer"
   },
   {
     "id": 15,
@@ -151,7 +173,9 @@
     "timestamp": "9:20 pm",
     "message": "I'm a certified home health aide, offering my services on weekday mornings to those who need medical support.",
     "serviceType": "Medical Assistance",
-    "availability": "Mornings"
+    "availability": "Mornings",
+
+    "role": "Volunteer"
   },
   {
     "id": 16,
@@ -162,6 +186,8 @@
     "timestamp": "9:20 pm",
     "message": "I can offer rides and assist with transportation during the afternoons. Let's get you where you need to go safely!",
     "serviceType": "Transportation",
-    "availability": "Weekdays"
+    "availability": "Weekdays",
+
+    "role": "Volunteer"
   }
 ]
