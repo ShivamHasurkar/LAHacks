@@ -46,7 +46,7 @@ const SectionImage = () => {
     <div className="min-w-full object-contain sm:h-72 md:h-96 lg:h-90">
       <img
         className="relative w-screen"
-        src="../assets/images/IMG_5654.png"
+        src="../assets/images/IMG_5654.PNG"
         alt="happy team image"
       />
     </div>
