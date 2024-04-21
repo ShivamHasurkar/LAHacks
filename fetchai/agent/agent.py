@@ -1,6 +1,5 @@
 import imaplib
 import email
-import datetime
 from typing import Dict, List
 import ast
 import re
@@ -9,6 +8,14 @@ from uagents import Agent, Context, Protocol, Model
 from pydantic import Field
 from ai_engine import UAgentResponse, UAgentResponseType
 import google.generativeai as genai
+from google.oauth2.service_account import Credentials
+from googleapiclient.discovery import build
+import datetime
+from pytz import timezone
+
+SERVICE_ACCOUNT_FILE = 'credentials.json'
+SCOPES = ['https://www.googleapis.com/auth/calendar']
+CALENDAR_ID = 'shivamhasurkar12@gmail.com'
 
 
 class Response(Model):
@@ -44,7 +51,7 @@ you will return a json array with json objects of the following format:\
 [{\
     \"sender\": email address of the sender,\
     \"subject\": Subject of the email,\
-    \"desciption\": a brief summary of the email,\
+    \"description\": a brief summary of the email,\
     data:{\
         any additional data extracted from the email in the form of key value pairs\
     }\
@@ -105,6 +112,34 @@ async def retrieve_emails(unread_emails: List, mail: imaplib.IMAP4_SSL):
             emails_content.append(msg_json)
     return emails_content
 
+async def schedule_event(formatted_emails: str, service: any, original_email: str):
+    email_json = json.loads(json.loads(formatted_emails))
+    print("sender:", email_json[0]["sender"])
+    for i in range(len(email_json)):
+        __email = email_json[i]
+        if "data" in __email:
+            
+            if "start" in __email["data"]:
+                start = __email["data"]["start"]
+
+                if "end" in __email["data"]:
+                    end = __email["data"]["end"]
+                event = {
+                    'summary': __email["subject"],
+                    'description': __email["description"],
+                    'start': {
+                        'dateTime': timezone('America/Los_Angeles').localize(datetime.datetime.strptime(start, "%d-%m-%Y %H:%M")).isoformat(),
+                        'timeZone': 'America/Los_Angeles',
+                    },
+                    'end': {
+                        'dateTime': timezone('America/Los_Angeles').localize(datetime.datetime.strptime(end, "%d-%m-%Y %H:%M")).isoformat(),
+                        'timeZone': 'America/Los_Angeles',
+                    },
+                }
+
+                event = service.events().insert(calendarId=CALENDAR_ID, body=event).execute()
+                print('Event created: %s' % (event.get('htmlLink')))
+
 
 @email_assistant_protocol.on_message(model=EmailAssistant, replies={Response})
 async def suggest_top_priority_emails(ctx: Context, sender: str, msg: EmailAssistant):
@@ -113,6 +148,11 @@ async def suggest_top_priority_emails(ctx: Context, sender: str, msg: EmailAssis
 
     username = msg.email
     password = msg.password
+
+    credentials = Credentials.from_service_account_file(
+        SERVICE_ACCOUNT_FILE, scopes=SCOPES)
+
+    service = build('calendar', 'v3', credentials=credentials)
 
     mail = imaplib.IMAP4_SSL("imap.gmail.com")
     mail.login(username, password)
@@ -133,6 +173,8 @@ async def suggest_top_priority_emails(ctx: Context, sender: str, msg: EmailAssis
         prioritized_emails = await get_gemini_response(emails_content=emails_content)
 
         string_converted = json.dumps(prioritized_emails)
+
+        await schedule_event(string_converted, service, msg.email)
 
         mail.close()
         mail.logout()
