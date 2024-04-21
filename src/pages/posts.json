@@ -1,0 +1,167 @@
+[
+  {
+    "id": 2,
+    "user": {
+      "name": "Raj",
+      "avatar": "path_to_avatar_image"
+    },
+    "timestamp": "9:20 pm",
+    "message": "If anyone needs assistance with grocery shopping or errand running, I'm available on weekends. Happy to help!",
+    "serviceType": "Errand Running",
+    "availability": "Weekends"
+  },
+  {
+    "id": 3,
+    "user": {
+      "name": "Sophie",
+      "avatar": "path_to_avatar_image"
+    },
+    "timestamp": "9:20 pm",
+    "message": "I'm a nurse offering medical assistance or health check-ups for seniors, especially on weekday mornings.",
+    "serviceType": "Medical Assistance",
+    "availability": "Weekdays"
+  },
+  {
+    "id": 4,
+    "user": {
+      "name": "Carlos",
+      "avatar": "path_to_avatar_image"
+    },
+    "timestamp": "9:20 pm",
+    "message": "Love to cook? Me too! I can provide food delivery services with a focus on healthy, homemade meals. Reach out!",
+    "serviceType": "Food Delivery",
+    "availability": "Weekdays"
+  },
+  {
+    "id": 5,
+    "user": {
+      "name": "Anita",
+      "avatar": "path_to_avatar_image"
+    },
+    "timestamp": "9:20 pm",
+    "message": "Offering house maintenance services on Fridays. Whether it's fixing a leak or changing a lightbulb, I'm here to help.",
+    "serviceType": "House Maintenance",
+    "availability": "Fridays"
+  },
+  {
+    "id": 6,
+    "user": {
+      "name": "Lee",
+      "avatar": "path_to_avatar_image"
+    },
+    "timestamp": "9:20 pm",
+    "message": "I'm available for home cleaning services during weekday evenings. A clean space is a happy space!",
+    "serviceType": "Cleaning Services",
+    "availability": "Weekdays"
+  },
+  {
+    "id": 7,
+    "user": {
+      "name": "Emma",
+      "avatar": "path_to_avatar_image"
+    },
+    "timestamp": "9:20 pm",
+    "message": "Available for companionship and social visits. I love board games and good conversation!",
+    "serviceType": "Companionship/Social Visits",
+    "availability": "Weekends"
+  },
+  {
+    "id": 8,
+    "user": {
+      "name": "Omar",
+      "avatar": "path_to_avatar_image"
+    },
+    "timestamp": "9:20 pm",
+    "message": "Certified personal trainer here to help with exercise and wellness activities. Let's stay active and healthy together!",
+    "serviceType": "Exercise & Wellness Activities",
+    "availability": "Weekends"
+  },
+  {
+    "id": 9,
+    "user": {
+      "name": "Jasmine",
+      "avatar": "path_to_avatar_image"
+    },
+    "timestamp": "9:20 pm",
+    "message": "I can help with transportation to appointments, shopping, or social events. I have a spacious car with accessibility features.",
+    "serviceType": "Transportation",
+    "availability": "Weekdays"
+  },
+  {
+    "id": 10,
+    "user": {
+      "name": "Gabriel",
+      "avatar": "path_to_avatar_image"
+    },
+    "timestamp": "9:20 pm",
+    "message": "Happy to provide personal assistance with daily activities or admin tasks. I'm patient and detail-oriented.",
+    "serviceType": "Personal Assistance",
+    "availability": "Weekdays"
+  },
+  {
+    "id": 11,
+    "user": {
+      "name": "Fatima",
+      "avatar": "path_to_avatar_image"
+    },
+    "timestamp": "9:20 pm",
+    "message": "Need tech support? I can help with computers, smartphones, and more. Just a call away!",
+    "serviceType": "Tech Support",
+    "availability": "Afternoons"
+  },
+  {
+    "id": 12,
+    "user": {
+      "name": "Ken",
+      "avatar": "path_to_avatar_image"
+    },
+    "timestamp": "9:20 pm",
+    "message": "I'm an electrician happy to volunteer for any electrical repairs or installations needed in your home.",
+    "serviceType": "House Maintenance",
+    "availability": "Evenings"
+  },
+  {
+    "id": 13,
+    "user": {
+      "name": "Lila",
+      "avatar": "path_to_avatar_image"
+    },
+    "timestamp": "9:20 pm",
+    "message": "If you're looking for someone to spend time and perhaps read together, I'm available most afternoons.",
+    "serviceType": "Companionship/Social Visits",
+    "availability": "Afternoons"
+  },
+  {
+    "id": 14,
+    "user": {
+      "name": "David",
+      "avatar": "path_to_avatar_image"
+    },
+    "timestamp": "9:20 pm",
+    "message": "Available for any heavy lifting or yard work that you might need help with. Just drop me a message!",
+    "serviceType": "House Maintenance",
+    "availability": "Full-Time"
+  },
+  {
+    "id": 15,
+    "user": {
+      "name": "Alisha",
+      "avatar": "path_to_avatar_image"
+    },
+    "timestamp": "9:20 pm",
+    "message": "I'm a certified home health aide, offering my services on weekday mornings to those who need medical support.",
+    "serviceType": "Medical Assistance",
+    "availability": "Mornings"
+  },
+  {
+    "id": 16,
+    "user": {
+      "name": "Theo",
+      "avatar": "path_to_avatar_image"
+    },
+    "timestamp": "9:20 pm",
+    "message": "I can offer rides and assist with transportation during the afternoons. Let's get you where you need to go safely!",
+    "serviceType": "Transportation",
+    "availability": "Weekdays"
+  }
+]
