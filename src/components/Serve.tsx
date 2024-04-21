@@ -8,6 +8,8 @@ const Serve= () => {
 
 
   return (
+    <div className="flex flex-col items-center justify-center bg-background">
+    <div className="max-w-8xl mx-auto px-8 sm:px-10 lg:px-8 border-3 border-gray-500 shadow-lg">
     <div className="py-12 bg-white" id="services"> {/* bg-white is a Tailwind class for white background */}
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center">
@@ -35,6 +37,8 @@ const Serve= () => {
         </div>
       </div>
     </div>
+  </div>
+  </div>
   </div>
   );
 };

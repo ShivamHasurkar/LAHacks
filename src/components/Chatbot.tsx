@@ -82,7 +82,7 @@ const botMessageStyle = "bg-gray-300 p-3 rounded-lg max-w-xs mr-auto";
           <div key={index} className={message.content.role === 'user' ? userMessageStyle : botMessageStyle}>
             {message?.content?.parts[0]?.text}
             {message.actions.map((action, actionIndex) => (
-              <button key={actionIndex} className="mt-2 text-blue-600 hover:underline">
+              <button key={actionIndex} className="mt-2 bg-blue-600 text-white py-1 px-3 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300 ease-in-out">
                 {action.actionText}
               </button>
             ))}
