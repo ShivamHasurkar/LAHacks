@@ -33,7 +33,7 @@ def read_root():
 async def make_agent_call(req: EmailAssistant):
     try:
         res = await agent_query(req)
-        return f"successful call - agent response: {res}"
+        return res
     except Exception as e:
         print(e)
         return "unsuccessful agent call"

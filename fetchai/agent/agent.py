@@ -60,6 +60,7 @@ Suppose there is a email asking for a meeting to be setup at a specified time. T
 Make sure you keep the format consistent. All the values will be of string type.\
 Always format the date and time into datetime format preferably dd-mm-yyyy hh:mm\
 The time data should always have \"start\" and \"end\" as the keys\
+Be careful while parsing the date times. Consider today's date and then extract the start and end date time from the emails accordingly.\
 Your response must be just like a normal JSON with the format specified.\
 Again, this is very important: Do not include the word \'json\' or backticks in you response. Your response must be a valid JSON array starting with the opening square brace.\
 Make sure your response is JSON parsable without any further processing. Do not include any special characters outside the JSON body response.\
@@ -124,6 +125,8 @@ async def schedule_event(formatted_emails: str, service: any, original_email: st
 
                 if "end" in __email["data"]:
                     end = __email["data"]["end"]
+                else:
+                    end = ""
                 event = {
                     'summary': __email["subject"],
                     'description': __email["description"],

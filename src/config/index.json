@@ -64,6 +64,6 @@
     ]
   },
   "api": {
-    "priorityEmailEndpoint": "http://192.168.91.151:8000/prioritize"
+    "priorityEmailEndpoint": "http://127.0.0.1:8000/prioritize"
   }
 }
