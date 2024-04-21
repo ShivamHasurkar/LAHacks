@@ -13,7 +13,7 @@ const App = () => {
   return (
 
     <div>
-    <div style={{ backgroundImage: "url('/assets/images/IMG_5650.png')",  zIndex:100}}>
+    <div style={{ backgroundImage: "url('/assets/images/IMG_5650.PNG')",  zIndex:100}}>
       <header className="flex justify-between items-center p-6 bg-sky-500 text-white">
         
         <img src="../assets/images/logo.jpeg" style={{ width: '150px', height: '150px' }} alt="logo"/>
