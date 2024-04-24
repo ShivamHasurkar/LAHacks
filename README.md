@@ -17,7 +17,7 @@ This is a dynamic space where the elderly can openly post about their needs and 
 - **Companionship/Social Visits**
 - **Medical Assistance**
 - **Errand Running**
-- **Exercise & Wellness Activities**
+- **Exercise and Wellness Activities**
 
 ### 2. Chat Interface
 AidEra's chat interface acts as a 24/7 AI companion that not only engages users in conversation but also helps manage their daily activities. Key features include:
