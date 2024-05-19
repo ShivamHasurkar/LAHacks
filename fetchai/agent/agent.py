@@ -69,7 +69,7 @@ Make sure your response is JSON parsable without any further processing. Do not 
 
 async def get_gemini_response(emails_content: List[Dict[str, str]]):
     genai.configure(
-        api_key="AIzaSyApKT0dYpL3fFsIakHHeldnltNub5g1X6Y")
+        api_key="    ")
     model = genai.GenerativeModel(
         'gemini-1.5-pro-latest', system_instruction=PROMPT)
     email_parts = [
